@@ -11,7 +11,5 @@ func physics_update(delta: float) -> void:
 		
 	player.velocity = player.move_and_slide(player.PlayerSpeed * input_direction)
 
-	print("Player velocity" , player.velocity)
-
 	if player.velocity == Vector2.ZERO:
 		state_machine.transition_to("Idle")

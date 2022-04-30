@@ -11,6 +11,7 @@
 extents = Vector2( 32.5, 33 )
 
 [node name="Player" type="KinematicBody2D"]
+collision_mask = 6
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -37,4 +38,4 @@ margin_right = 20.0
 margin_bottom = -36.0
 
 [node name="lightbeam" parent="." instance=ExtResource( 6 )]
-position = Vector2( -10, 1 )
+position = Vector2( 3, 2 )
