@@ -8,7 +8,7 @@
 blend_mode = 1
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 4.5, 15 )
+extents = Vector2( 11, 32 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 16, 16 )
