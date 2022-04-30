@@ -39,3 +39,5 @@ margin_bottom = -36.0
 
 [node name="lightbeam" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3, 2 )
+
+[connection signal="fire" from="." to="lightbeam" method="_on_Player_fire"]
