@@ -44,8 +44,9 @@ script = ExtResource( 5 )
 position = Vector2( 3, 2 )
 
 [node name="Light2D" type="Light2D" parent="lightbeam"]
-position = Vector2( 1.58104, -0.578018 )
+position = Vector2( 1.97298, -1.37203 )
 rotation = 1.57079
+scale = Vector2( 0.792389, 0.703368 )
 texture = ExtResource( 7 )
 offset = Vector2( 30.5785, -203.419 )
 texture_scale = 0.8
@@ -55,8 +56,10 @@ shadow_gradient_length = 3.0
 shadow_filter = 2
 
 [node name="Light2D2" type="Light2D" parent="lightbeam"]
-position = Vector2( 1.58104, -0.578018 )
+visible = false
+position = Vector2( -83.2553, -0.576886 )
 rotation = 1.57079
+scale = Vector2( 1, 0.663851 )
 texture = ExtResource( 7 )
 offset = Vector2( 30.5785, -203.419 )
 texture_scale = 0.8

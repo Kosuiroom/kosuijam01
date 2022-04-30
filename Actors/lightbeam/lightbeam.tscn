@@ -12,19 +12,19 @@ script = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="short"]
-polygon = PoolVector2Array( 0, 0, 105, -60, 104, 47 )
+polygon = PoolVector2Array( 2, -2, 104, -42, 104, 36 )
 
 [node name="middle" type="Area2D" parent="."]
 script = ExtResource( 4 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="middle"]
-polygon = PoolVector2Array( 104, -60, 270, -136, 272, 112, 103, 47 )
+polygon = PoolVector2Array( 104, -42, 178, -70, 176, 61, 103, 35 )
 
 [node name="far" type="Area2D" parent="."]
 script = ExtResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="far"]
-polygon = PoolVector2Array( 270, -136, 454, -197, 448, 163, 272, 112 )
+polygon = PoolVector2Array( 177, -70, 342, -132, 338, 123, 177, 61 )
 
 [connection signal="area" from="." to="short" method="_on_Lightbeam_area"]
 [connection signal="area" from="." to="middle" method="_on_Lightbeam_area"]
