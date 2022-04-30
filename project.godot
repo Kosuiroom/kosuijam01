@@ -42,6 +42,10 @@ config/name="Kosuijam 01"
 run/main_scene="res://gamelevel/Main.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/resizable=false
+
 [input]
 
 mvRight={

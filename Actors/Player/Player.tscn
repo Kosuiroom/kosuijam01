@@ -1,14 +1,15 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Player Full.png" type="Texture" id=1]
 [ext_resource path="res://Actors/Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://FSM/statemachine.gd" type="Script" id=3]
 [ext_resource path="res://Actors/Player/Idle.gd" type="Script" id=4]
 [ext_resource path="res://Actors/Player/Run.gd" type="Script" id=5]
 [ext_resource path="res://Actors/lightbeam/lightbeam.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Sprites/Light Cone.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32.5, 33 )
+extents = Vector2( 4.125, 12 )
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 4
@@ -18,7 +19,7 @@ script = ExtResource( 2 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.5, -1 )
+position = Vector2( 0, 2 )
 shape = SubResource( 1 )
 
 [node name="StateMachine" type="Node" parent="."]
@@ -33,5 +34,27 @@ script = ExtResource( 5 )
 
 [node name="lightbeam" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3, 2 )
+
+[node name="Light2D" type="Light2D" parent="lightbeam"]
+position = Vector2( 1.58104, -0.578018 )
+rotation = 1.57079
+texture = ExtResource( 7 )
+offset = Vector2( 30.5785, -203.419 )
+texture_scale = 0.8
+energy = 1.27
+shadow_enabled = true
+shadow_gradient_length = 3.0
+shadow_filter = 2
+
+[node name="Light2D2" type="Light2D" parent="lightbeam"]
+position = Vector2( 1.58104, -0.578018 )
+rotation = 1.57079
+texture = ExtResource( 7 )
+offset = Vector2( 30.5785, -203.419 )
+texture_scale = 0.8
+energy = 0.3
+shadow_gradient_length = 3.0
+shadow_filter = 2
+shadow_filter_smooth = 4.0
 
 [connection signal="fire" from="." to="lightbeam" method="_on_Player_fire"]
