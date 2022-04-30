@@ -44,6 +44,7 @@ func _set_health(value):
 
 func takeDmg():
 	damage(1)
+	$Player_Damage.play()
 
 func IsKilled():
 	print("player died")
