@@ -1,0 +1,15 @@
+[gd_scene format=2]
+
+[node name="lightbeam" type="Area2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 9, -1, 70, -15, 70, 15 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2( 85, 1 )
+polygon = PoolVector2Array( -15, -16, 87, -33, 87, 33, -15, 14 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="."]
+position = Vector2( 187, 3 )
+scale = Vector2( 1, 2.17803 )
+polygon = PoolVector2Array( -15, -16, 87, -33, 87, 33, -15, 14 )
