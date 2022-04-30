@@ -2,6 +2,9 @@ class_name Player
 extends KinematicBody2D
 ###Node initialization
 onready var fsm := $StateMachine
+const invincibility = 1.5
+onready var hurtbox = $hurtbox
+onready var blinker = $blinker
 
 ###Player stats
 var velocity
@@ -15,7 +18,6 @@ signal health_update(playerHealth)
 signal fire()
 
 ###Methods
-
 func _process(_delta: float) -> void:
 	look_at(get_global_mouse_position())
 	
@@ -44,8 +46,16 @@ func _set_health(value):
 
 func takeDmg():
 	damage(1)
-	$Player_Damage.play()
 
 func IsKilled():
 	print("player died")
 	pass
+
+
+func _on_hurtbox_body_entered(body):
+	if "Monster" in body.name:
+		if !hurtbox.is_invinc:
+			blinker.start_blinking(self, invincibility)
+			hurtbox.start_invinc(invincibility)
+			takeDmg()
+		

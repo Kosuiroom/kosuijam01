@@ -33,8 +33,3 @@ func IsKilled():
 	if "Monster" in name:
 		Global.score += 100
 		queue_free()
-
-
-func _on_dmg_body_entered(body):
-	if body.name == "Player":
-		body.takeDmg()
