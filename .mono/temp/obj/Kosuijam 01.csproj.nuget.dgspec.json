@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\USERS\\PONTU\\DESKTOP\\PROJEKT\\KOSUIJAM01\\Kosuijam 01.csproj": {}
+    "C:\\Users\\pontu\\Desktop\\Projekt\\kosuijam01\\Kosuijam 01.csproj": {}
   },
   "projects": {
-    "C:\\USERS\\PONTU\\DESKTOP\\PROJEKT\\KOSUIJAM01\\Kosuijam 01.csproj": {
+    "C:\\Users\\pontu\\Desktop\\Projekt\\kosuijam01\\Kosuijam 01.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\USERS\\PONTU\\DESKTOP\\PROJEKT\\KOSUIJAM01\\Kosuijam 01.csproj",
+        "projectUniqueName": "C:\\Users\\pontu\\Desktop\\Projekt\\kosuijam01\\Kosuijam 01.csproj",
         "projectName": "Kosuijam 01",
-        "projectPath": "C:\\USERS\\PONTU\\DESKTOP\\PROJEKT\\KOSUIJAM01\\Kosuijam 01.csproj",
+        "projectPath": "C:\\Users\\pontu\\Desktop\\Projekt\\kosuijam01\\Kosuijam 01.csproj",
         "packagesPath": "C:\\Users\\pontu\\.nuget\\packages\\",
-        "outputPath": "C:\\USERS\\PONTU\\DESKTOP\\PROJEKT\\KOSUIJAM01\\.mono\\temp\\obj\\",
+        "outputPath": "C:\\Users\\pontu\\Desktop\\Projekt\\kosuijam01\\.mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pontu\\AppData\\Roaming\\NuGet\\NuGet.Config",
