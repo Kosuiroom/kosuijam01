@@ -31,6 +31,7 @@ func _set_health(value):
 
 func IsKilled():
 	if "Monster" in name:
+		Global.score += 100
 		queue_free()
 
 
