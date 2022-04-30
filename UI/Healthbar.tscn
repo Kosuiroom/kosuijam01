@@ -1,0 +1,5 @@
+[gd_scene format=2]
+
+[node name="TextureProgress" type="TextureProgress"]
+margin_right = 203.0
+margin_bottom = 40.0

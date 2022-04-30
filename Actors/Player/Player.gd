@@ -2,7 +2,6 @@ class_name Player
 extends KinematicBody2D
 ###Node initialization
 onready var fsm := $StateMachine
-onready var label := $Label
 
 ###Player stats
 var velocity
@@ -13,13 +12,11 @@ var dmgtodeal
 #
 ###Signals
 signal health_update(playerHealth)
-signal dmgenemy(dmg)
 signal fire()
 
 ###Methods
 
 func _process(_delta: float) -> void:
-	label.text = fsm.state.name
 	look_at(get_global_mouse_position())
 	
 	if Input.is_action_just_pressed("fire"):

@@ -15,7 +15,6 @@ func _physics_process(delta):
 
 
 func _on_Player_dmgenemy(dmg):
-	print("dmg ataken to monster: ", dmg )
 	damage(dmg)
 
 func damage(amount):
@@ -23,17 +22,18 @@ func damage(amount):
 	print("monster took health")
 
 func _set_health(value):
-	print("health value: ", value)
 	var prev_health = monsterHealth
-	print("prev health: ", prev_health)
 	monsterHealth = clamp(value, 0, MaxHealth)
-	print("monster health ", monsterHealth)
 	
 	if monsterHealth != prev_health:
 		if monsterHealth <= 0:
 			IsKilled()
 
 func IsKilled():
-	print("monster died: ", name)
 	if "Monster" in name:
 		queue_free()
+
+
+func _on_dmg_body_entered(body):
+	if body.name == "Player":
+		body.takeDmg()
