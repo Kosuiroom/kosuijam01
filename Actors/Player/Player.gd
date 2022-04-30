@@ -18,6 +18,10 @@ export(int) var MaxHealth := 3
 
 func _process(_delta: float) -> void:
 	label.text = fsm.state.name
+	look_at(get_global_mouse_position())
+	
+	if Input.is_action_pressed("fire"):
+		print("fire!")
 
 #func damage(amount):
 #	if Invulnerability_Timer.is_stopped():
