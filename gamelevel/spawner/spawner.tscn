@@ -8,3 +8,4 @@ script = ExtResource( 1 )
 
 [node name="spawnsound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
+volume_db = 7.0

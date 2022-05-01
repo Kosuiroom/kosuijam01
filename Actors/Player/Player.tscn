@@ -88,7 +88,6 @@ energy = 1.4
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 15 )
 animation = "walking"
-frame = 1
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]

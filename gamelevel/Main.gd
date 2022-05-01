@@ -4,6 +4,9 @@ var enemies = preload("res://Actors/Enemy/monster.tscn")
 onready var spawn1 = $Spawner
 onready var spawnsound2 = $Spawner/spawnsound
 
+func _ready():
+	Musiccontroller.playgame()
+
 func _on_SpawnTimer_timeout():
 	var enemy = enemies.instance()
 	add_child(enemy)

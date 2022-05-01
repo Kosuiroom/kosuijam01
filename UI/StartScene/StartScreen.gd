@@ -10,6 +10,7 @@ func _ready():
 func _on_Start_pressed():
 	Global.is_dead = false
 	get_tree().change_scene("res://gamelevel/Main.tscn")
+	Musiccontroller.stopplay()
 
 
 func _on_Exit_pressed():

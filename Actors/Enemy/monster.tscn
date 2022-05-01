@@ -139,13 +139,12 @@ script = ExtResource( 2 )
 material = ExtResource( 9 )
 frames = SubResource( 9 )
 animation = "Walking"
-frame = 2
+frame = 4
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="AnimatedSprite"]
 material = SubResource( 16 )
 frames = SubResource( 15 )
-frame = 3
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -162,6 +161,7 @@ texture = ExtResource( 3 )
 
 [node name="enemydeath" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
+volume_db = 6.0
 
 [node name="body" type="CollisionShape2D" parent="."]
 position = Vector2( -1, 4.25 )
