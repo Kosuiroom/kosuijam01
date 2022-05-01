@@ -12,5 +12,6 @@ func _on_Player_discharge():
 func _on_Timer_timeout():
 	if chargebar.value <= 5:
 		chargebar.value += 1
+		Global.batterycharge = chargebar.value
 	if chargebar.value == 5:
 		timer.stop()

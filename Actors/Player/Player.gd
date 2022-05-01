@@ -11,7 +11,6 @@ var velocity
 export var PlayerSpeed := 200.0
 export(int) var MaxHealth := 3
 onready var playerHealth = MaxHealth setget _set_health
-var dmgtodeal
 #
 ###Signals
 signal health_update(playerHealth)
@@ -26,8 +25,12 @@ func _process(_delta: float) -> void:
 		fire()
 
 func fire():
-	emit_signal("fire")
-	emit_signal("discharge")
+	if Global.batterycharge != 0:
+		Global.batterycharge = 0
+		emit_signal("fire")
+		emit_signal("discharge")
+	else:
+		print("no charge, can not fire")
 	
 
 func damage(amount):
