@@ -26,10 +26,12 @@ func _process(_delta: float) -> void:
 		print("cant fire, no juice")
 
 func fire():
+	$attack.play()
 	emit_signal("fire")
 	emit_signal("discharge")
 
 func damage(amount):
+		$dmgd.play()
 		_set_health(playerHealth - amount)
 
 func _set_health(value):

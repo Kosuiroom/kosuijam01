@@ -11,6 +11,7 @@ func _on_Player_discharge():
 
 func _on_Timer_timeout():
 	if chargebar.value <= 5:
+		$charging.play()
 		chargebar.value += 1
 		Global.batterycharge = chargebar.value
 		print("charge val: ", Global.batterycharge)

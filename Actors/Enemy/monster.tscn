@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Sprites/Monster/Monster - Abyss Squid.png" type="Texture" id=1]
 [ext_resource path="res://Actors/Enemy/monster.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Sprites/Monster/Monster - Walking Sprite sheet.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Monster/Monster Attack - Sprite Sheetpng.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Monster/Monster Attack Eyes.png" type="Texture" id=7]
+[ext_resource path="res://Sound/enemy_death_2.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Actors/Player/whites.tres" type="Material" id=9]
 
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 5 )
@@ -133,14 +135,16 @@ collision_mask = 5
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 9 )
 frames = SubResource( 9 )
 animation = "Walking"
+frame = 3
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="AnimatedSprite"]
 material = SubResource( 16 )
 frames = SubResource( 15 )
-frame = 1
+frame = 4
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -154,6 +158,9 @@ modulate = Color( 1.5, 1, 1, 1 )
 material = SubResource( 3 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
+
+[node name="enemydeath" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
 
 [node name="body" type="CollisionShape2D" parent="."]
 position = Vector2( -1, 4.25 )

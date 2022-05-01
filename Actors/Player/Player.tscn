@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Sprites/Player/Player Full.png" type="Texture" id=1]
 [ext_resource path="res://Actors/Player/Player.gd" type="Script" id=2]
@@ -10,7 +10,8 @@
 [ext_resource path="res://Actors/Player/hurtbox.gd" type="Script" id=8]
 [ext_resource path="res://Actors/Player/whites.tres" type="Material" id=9]
 [ext_resource path="res://Actors/Player/blinker.gd" type="Script" id=10]
-
+[ext_resource path="res://Sound/flash_attack_2.mp3" type="AudioStream" id=11]
+[ext_resource path="res://Sound/player_damage_3.wav" type="AudioStream" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 11 )
@@ -84,6 +85,12 @@ script = ExtResource( 10 )
 wait_time = 0.1
 
 [node name="durationtimer" type="Timer" parent="blinker"]
+
+[node name="dmgd" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[node name="attack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
 
 [connection signal="fire" from="." to="lightbeam" method="_on_Player_fire"]
 [connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]

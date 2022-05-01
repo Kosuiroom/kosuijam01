@@ -38,6 +38,9 @@ func _set_health(value):
 func IsKilled():
 	if "Monster" in name:
 		Global.score += 100
+		$enemydeath.play()
+		run_speed = 0
+		yield(get_tree().create_timer(1), "timeout")
 		queue_free()
 
 func _on_playerdetect_body_entered(body):
