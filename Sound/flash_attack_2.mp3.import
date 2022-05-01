@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/flash_attack_2.mp3-0ee2091958bf6b701ddf1248a9382373.mp3str"
+
+[deps]
+
+source_file="res://Sound/flash_attack_2.mp3"
+dest_files=[ "res://.import/flash_attack_2.mp3-0ee2091958bf6b701ddf1248a9382373.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
