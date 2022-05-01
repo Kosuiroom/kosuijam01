@@ -20,11 +20,9 @@ signal discharge()
 
 ###Methods
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("fire") and Global.batterycharge >= 5:
+	if Input.is_action_just_pressed("fire") and Global.batterycharge >= 5 and !Global.is_dead:
 		Global.batterycharge = 2
 		fire()
-	elif Input.is_action_just_pressed("fire") and Global.batterycharge < 3:
-		print("cant fire, no juice")
 
 func fire():
 	$attack.play()
