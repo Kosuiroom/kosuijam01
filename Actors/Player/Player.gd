@@ -19,19 +19,15 @@ signal discharge()
 
 ###Methods
 func _process(_delta: float) -> void:
-	
-	if Input.is_action_just_pressed("fire"):
+	if Input.is_action_just_pressed("fire") and Global.batterycharge >= 5:
+		Global.batterycharge = 2
 		fire()
+	elif Input.is_action_just_pressed("fire") and Global.batterycharge < 3:
+		print("cant fire, no juice")
 
 func fire():
-	prints("charge: ", Global.batterycharge)
-	if Global.batterycharge > 2:
-		emit_signal("fire")
-		emit_signal("discharge")
-		prints("discharge: ", Global.batterycharge)
-		Global.batterycharge = 1
-	else:
-		print("cant fire")
+	emit_signal("fire")
+	emit_signal("discharge")
 
 func damage(amount):
 		_set_health(playerHealth - amount)
@@ -49,7 +45,9 @@ func takeDmg():
 	damage(1)
 
 func IsKilled():
+	Global.is_dead = true
 	print("player died")
+	Global.batterycharge = 5
 	yield(get_tree().create_timer(3), "timeout")
 	get_tree().change_scene("res://UI/StartScene/StartScreen.tscn")
 

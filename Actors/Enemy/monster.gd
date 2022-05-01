@@ -3,7 +3,7 @@ extends KinematicBody2D
 var run_speed = 100
 var velocity = Vector2.ZERO
 var direction
-export(int) var MaxHealth := 5
+export(int) var MaxHealth := 3
 onready var monsterHealth = MaxHealth setget _set_health
 onready var player = get_node("/root/Main/Player")
 
@@ -19,7 +19,7 @@ func _on_Player_dmgenemy(dmg):
 
 func damage(amount):
 	_set_health(monsterHealth - amount)
-	print("monster took health")
+	print("monster took dmg", amount)
 
 func _set_health(value):
 	var prev_health = monsterHealth

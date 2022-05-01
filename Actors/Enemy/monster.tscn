@@ -69,7 +69,7 @@ animations = [ {
 blend_mode = 1
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 11, 32 )
+extents = Vector2( 7, 27 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 16, 16 )
@@ -99,7 +99,7 @@ material = SubResource( 3 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 8, 1 )
+position = Vector2( 12, 1 )
 shape = SubResource( 1 )
 
 [node name="dmg" type="Area2D" parent="."]
