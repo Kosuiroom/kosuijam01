@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var run_speed = 100
+var run_speed = 80
 var velocity = Vector2.ZERO
 var direction
 export(int) var MaxHealth := 3
