@@ -120,28 +120,28 @@ animations = [ {
 [sub_resource type="CanvasItemMaterial" id=3]
 blend_mode = 1
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7, 27 )
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 5, 7.5 )
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 16, 16 )
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 12, 11.75 )
 
 [node name="Monster" type="KinematicBody2D"]
 scale = Vector2( 2, 2 )
 collision_layer = 4
+collision_mask = 5
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 9 )
-animation = "Attack"
-frame = 2
+animation = "Walking"
+frame = 3
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="AnimatedSprite"]
 material = SubResource( 16 )
 frames = SubResource( 15 )
-animation = "Attack"
-frame = 2
+frame = 4
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -156,11 +156,16 @@ material = SubResource( 3 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 12, 1 )
-shape = SubResource( 1 )
+[node name="body" type="CollisionShape2D" parent="."]
+position = Vector2( -1.5, 4.5 )
+shape = SubResource( 27 )
 
-[node name="dmg" type="Area2D" parent="."]
+[node name="playerdetect" type="Area2D" parent="."]
+collision_layer = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="dmg"]
-shape = SubResource( 2 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="playerdetect"]
+position = Vector2( -1.5, 4 )
+shape = SubResource( 28 )
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="body_entered" from="playerdetect" to="." method="_on_playerdetect_body_entered"]

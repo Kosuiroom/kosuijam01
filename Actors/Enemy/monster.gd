@@ -6,12 +6,18 @@ var direction
 export(int) var MaxHealth := 3
 onready var monsterHealth = MaxHealth setget _set_health
 onready var player = get_node("/root/Main/Player")
+onready var detectplayer = $playerdetect
 
 
 func _physics_process(delta):
 	if player:
 		direction = position.direction_to(player.position).normalized()
 		move_and_slide(direction * run_speed)
+		
+		if direction.x < 0:
+			$AnimatedSprite.flip_h = true
+		else:
+			$AnimatedSprite.flip_h = false
 
 
 func _on_Player_dmgenemy(dmg):
@@ -33,3 +39,11 @@ func IsKilled():
 	if "Monster" in name:
 		Global.score += 100
 		queue_free()
+
+func _on_playerdetect_body_entered(body):
+	print("player detected")
+	$AnimatedSprite.play("Attack")
+
+
+func _on_AnimatedSprite_animation_finished():
+	$AnimatedSprite.play("Walking")
