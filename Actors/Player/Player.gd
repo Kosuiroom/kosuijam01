@@ -26,8 +26,15 @@ func _process(_delta: float) -> void:
 
 func fire():
 	$attack.play()
+	$lightbeam/Light2D.set_energy(2)
+	$lightbeam/Light2D2.set_energy(1.8)
+	$lightbeam/Light2D3.set_energy(1.6)
 	emit_signal("fire")
 	emit_signal("discharge")
+	yield(get_tree().create_timer(1), "timeout")
+	$lightbeam/Light2D.set_energy(1.27)
+	$lightbeam/Light2D2.set_energy(1.27)
+	$lightbeam/Light2D3.set_energy(1.27)
 
 func damage(amount):
 		$dmgd.play()
