@@ -9,7 +9,7 @@
 [ext_resource path="res://Sprites/Flash Cone.png" type="Texture" id=7]
 [ext_resource path="res://Actors/Player/hurtbox.gd" type="Script" id=8]
 [ext_resource path="res://Actors/Player/whites.tres" type="Material" id=9]
-[ext_resource path="res://Actors/Player/blinker.gd" type="Script" id=10]
+[ext_resource path="res://Actors/blinker.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Sound/flash_attack_2.mp3" type="AudioStream" id=11]
 [ext_resource path="res://Sound/player_damage_3.wav" type="AudioStream" id=12]
 
@@ -90,22 +90,14 @@ script = ExtResource( 4 )
 [node name="Run" type="Node" parent="StateMachine"]
 script = ExtResource( 5 )
 
-[node name="blinker" type="Node" parent="."]
-script = ExtResource( 10 )
-
-[node name="blinktimer" type="Timer" parent="blinker"]
-wait_time = 0.1
-
-[node name="durationtimer" type="Timer" parent="blinker"]
-
 [node name="dmgd" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
 
 [node name="attack" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
 
+[node name="blinker" parent="." instance=ExtResource( 10 )]
+
 [connection signal="fire" from="." to="lightbeam" method="_on_Player_fire"]
 [connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]
 [connection signal="body_entered" from="hurtbox" to="hurtbox" method="_on_hurtbox_body_entered"]
-[connection signal="timeout" from="blinker/blinktimer" to="blinker" method="_on_blinktimer_timeout"]
-[connection signal="timeout" from="blinker/durationtimer" to="blinker" method="_on_durationtimer_timeout"]

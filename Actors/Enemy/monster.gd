@@ -7,6 +7,7 @@ export(int) var MaxHealth := 3
 onready var monsterHealth = MaxHealth setget _set_health
 onready var player = get_node("/root/Main/Player")
 onready var detectplayer = $playerdetect
+onready var blinker = $blinker
 
 
 func _physics_process(delta):
@@ -40,6 +41,7 @@ func IsKilled():
 		Global.score += 100
 		$enemydeath.play()
 		run_speed = 0
+		blinker.start_blinking(self, 1.5)
 		yield(get_tree().create_timer(1), "timeout")
 		queue_free()
 
