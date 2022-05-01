@@ -12,10 +12,10 @@
 [ext_resource path="res://Actors/Player/blinker.gd" type="Script" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 6.5, 11 )
+extents = Vector2( 10, 11 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 7.5, 12 )
+extents = Vector2( 11, 12 )
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 4
