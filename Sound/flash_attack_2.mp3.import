@@ -11,5 +11,5 @@ dest_files=[ "res://.import/flash_attack_2.mp3-0ee2091958bf6b701ddf1248a9382373.
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
