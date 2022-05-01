@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Monster - Abyss Squid Eyes.png-496e9bb19cc709847a74836da3f6226f.stex"
+path="res://.import/Monster Eyes - Sprite Sheet.png-4fdd9d816871db94b3eeed747d4eaa61.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Monster - Abyss Squid Eyes.png"
-dest_files=[ "res://.import/Monster - Abyss Squid Eyes.png-496e9bb19cc709847a74836da3f6226f.stex" ]
+source_file="res://Sprites/Monster/Monster Eyes - Sprite Sheet.png"
+dest_files=[ "res://.import/Monster Eyes - Sprite Sheet.png-4fdd9d816871db94b3eeed747d4eaa61.stex" ]
 
 [params]
 

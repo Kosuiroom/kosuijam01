@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Sprites/Player Full.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Player/Player Full.png" type="Texture" id=1]
 [ext_resource path="res://Actors/Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://FSM/statemachine.gd" type="Script" id=3]
 [ext_resource path="res://Actors/Player/Idle.gd" type="Script" id=4]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Actors/Player/hurtbox.gd" type="Script" id=8]
 [ext_resource path="res://Actors/Player/whites.tres" type="Material" id=9]
 [ext_resource path="res://Actors/Player/blinker.gd" type="Script" id=10]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 11 )

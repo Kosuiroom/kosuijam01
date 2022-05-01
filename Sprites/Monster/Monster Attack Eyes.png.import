@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Monster - Walking Sprite sheet.png-f03ea49b0160aa4743510c96e6c7c235.stex"
+path="res://.import/Monster Attack Eyes.png-00714a66917a1e10646852c8406d8097.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Monster - Walking Sprite sheet.png"
-dest_files=[ "res://.import/Monster - Walking Sprite sheet.png-f03ea49b0160aa4743510c96e6c7c235.stex" ]
+source_file="res://Sprites/Monster/Monster Attack Eyes.png"
+dest_files=[ "res://.import/Monster Attack Eyes.png-00714a66917a1e10646852c8406d8097.stex" ]
 
 [params]
 

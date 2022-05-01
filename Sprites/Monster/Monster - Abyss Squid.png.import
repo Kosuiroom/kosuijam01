@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Player Full.png-b02b3d4dd835260efbdd29a236b570aa.stex"
+path="res://.import/Monster - Abyss Squid.png-42a36d4af2a3dae90ac4bd430cbf7c9d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player Full.png"
-dest_files=[ "res://.import/Player Full.png-b02b3d4dd835260efbdd29a236b570aa.stex" ]
+source_file="res://Sprites/Monster/Monster - Abyss Squid.png"
+dest_files=[ "res://.import/Monster - Abyss Squid.png-42a36d4af2a3dae90ac4bd430cbf7c9d.stex" ]
 
 [params]
 
