@@ -14,6 +14,8 @@ collision_mask = 4
 script = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="short"]
+position = Vector2( -2.38419e-07, 0 )
+scale = Vector2( 0.322983, 0.170455 )
 polygon = PoolVector2Array( 2, -2, 104, -42, 103, 35 )
 
 [node name="middle" type="Area2D" parent="."]
@@ -22,6 +24,8 @@ collision_mask = 4
 script = ExtResource( 4 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="middle"]
+position = Vector2( -22.6995, 0.294368 )
+scale = Vector2( 0.540835, 0.176527 )
 polygon = PoolVector2Array( 104, -42, 177, -70, 176, 61, 103, 35 )
 
 [node name="far" type="Area2D" parent="."]
@@ -30,6 +34,8 @@ collision_mask = 4
 script = ExtResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="far"]
+position = Vector2( 27, 1.33388 )
+scale = Vector2( 0.263554, 0.155079 )
 polygon = PoolVector2Array( 177, -70, 342, -132, 338, 123, 176, 61 )
 
 [connection signal="area" from="." to="short" method="_on_Lightbeam_area"]

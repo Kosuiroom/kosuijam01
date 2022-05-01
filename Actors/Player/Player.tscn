@@ -6,7 +6,7 @@
 [ext_resource path="res://Actors/Player/Idle.gd" type="Script" id=4]
 [ext_resource path="res://Actors/Player/Run.gd" type="Script" id=5]
 [ext_resource path="res://Actors/lightbeam/lightbeam.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Sprites/Light Cone.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Flash Cone.png" type="Texture" id=7]
 [ext_resource path="res://Actors/Player/hurtbox.gd" type="Script" id=8]
 [ext_resource path="res://Actors/Player/whites.tres" type="Material" id=9]
 [ext_resource path="res://Actors/Player/blinker.gd" type="Script" id=10]
@@ -42,12 +42,12 @@ position = Vector2( 0.5, 1 )
 shape = SubResource( 4 )
 
 [node name="lightbeam" parent="." instance=ExtResource( 6 )]
-position = Vector2( 3, 2 )
+position = Vector2( 2, -5 )
 
 [node name="Light2D" type="Light2D" parent="lightbeam"]
-position = Vector2( 1.97298, -1.37203 )
-rotation = 1.57079
-scale = Vector2( 0.792389, 0.703368 )
+position = Vector2( 2, 0 )
+rotation = 1.56605
+scale = Vector2( 0.0356037, 0.0579232 )
 texture = ExtResource( 7 )
 offset = Vector2( 30.5785, -203.419 )
 texture_scale = 0.8
@@ -57,16 +57,28 @@ shadow_gradient_length = 3.0
 shadow_filter = 2
 
 [node name="Light2D2" type="Light2D" parent="lightbeam"]
-position = Vector2( -67, 1 )
+position = Vector2( 2.43105, -0.222976 )
 rotation = 1.57079
-scale = Vector2( 1, 0.663851 )
+scale = Vector2( 0.0790302, 0.130896 )
 texture = ExtResource( 7 )
 offset = Vector2( 30.5785, -203.419 )
 texture_scale = 0.8
-energy = 0.3
+energy = 1.27
+shadow_enabled = true
 shadow_gradient_length = 3.0
 shadow_filter = 2
-shadow_filter_smooth = 4.0
+
+[node name="Light2D3" type="Light2D" parent="lightbeam"]
+position = Vector2( 0, 1.90735e-06 )
+rotation = 1.57079
+scale = Vector2( 0.11676, 0.225508 )
+texture = ExtResource( 7 )
+offset = Vector2( 30.5785, -203.419 )
+texture_scale = 0.8
+energy = 1.27
+shadow_enabled = true
+shadow_gradient_length = 3.0
+shadow_filter = 2
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 3 )
