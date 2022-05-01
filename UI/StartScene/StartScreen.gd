@@ -5,6 +5,7 @@ onready var startbtn = $menuitems/Start
 func _ready():
 	startbtn.grab_focus()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	Musiccontroller.play()
 	
 func _on_Start_pressed():
 	Global.is_dead = false
