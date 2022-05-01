@@ -121,7 +121,7 @@ animations = [ {
 blend_mode = 1
 
 [sub_resource type="RectangleShape2D" id=27]
-extents = Vector2( 5, 7.5 )
+extents = Vector2( 4.5, 7.25 )
 
 [sub_resource type="RectangleShape2D" id=28]
 extents = Vector2( 12, 11.75 )
@@ -157,7 +157,7 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 
 [node name="body" type="CollisionShape2D" parent="."]
-position = Vector2( -1.5, 4.5 )
+position = Vector2( -1, 4.25 )
 shape = SubResource( 27 )
 
 [node name="playerdetect" type="Area2D" parent="."]
