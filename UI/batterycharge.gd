@@ -13,5 +13,6 @@ func _on_Timer_timeout():
 	if chargebar.value <= 5:
 		chargebar.value += 1
 		Global.batterycharge = chargebar.value
+		print("charge val: ", Global.batterycharge)
 	if chargebar.value == 5:
 		timer.stop()

@@ -1,4 +1,4 @@
 extends Node
 
-var batterycharge = 3
+var batterycharge = 5
 var score = 0

@@ -19,30 +19,26 @@ signal discharge()
 
 ###Methods
 func _process(_delta: float) -> void:
-	look_at(get_global_mouse_position())
 	
 	if Input.is_action_just_pressed("fire"):
 		fire()
 
 func fire():
-	if Global.batterycharge != 0:
-		Global.batterycharge = 0
+	prints("charge: ", Global.batterycharge)
+	if Global.batterycharge > 2:
 		emit_signal("fire")
 		emit_signal("discharge")
+		prints("discharge: ", Global.batterycharge)
+		Global.batterycharge = 1
 	else:
-		print("no charge, can not fire")
-	
+		print("cant fire")
 
 func damage(amount):
 		_set_health(playerHealth - amount)
-		print("player took health")
 
 func _set_health(value):
-	print("health value: ", value)
 	var prev_health = playerHealth
-	print("prev health: ", prev_health)
 	playerHealth = clamp(value, 0, MaxHealth)
-	print("player health ", playerHealth)
 
 	if playerHealth != prev_health:
 		emit_signal("health_update", playerHealth)
@@ -54,7 +50,8 @@ func takeDmg():
 
 func IsKilled():
 	print("player died")
-	pass
+	yield(get_tree().create_timer(3), "timeout")
+	get_tree().change_scene("res://UI/StartScene/StartScreen.tscn")
 
 
 func _on_hurtbox_body_entered(body):
