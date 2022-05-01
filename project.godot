@@ -39,7 +39,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Kosuijam 01"
-run/main_scene="res://gamelevel/Main.tscn"
+run/main_scene="res://UI/StartScene/StartScreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]
