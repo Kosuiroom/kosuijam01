@@ -49,7 +49,7 @@ func IsKilled():
 	print("player died")
 	Global.batterycharge = 5
 	yield(get_tree().create_timer(3), "timeout")
-	get_tree().change_scene("res://UI/StartScene/StartScreen.tscn")
+	get_tree().change_scene("res://UI/deathscreen/deathscene.tscn")
 
 
 func _on_hurtbox_body_entered(body):
