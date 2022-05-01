@@ -24,12 +24,14 @@ margin_bottom = 24.0
 [node name="Start" type="Button" parent="menuitems"]
 margin_right = 365.0
 margin_bottom = 20.0
+focus_neighbour_top = NodePath("../Exit")
 text = "Start"
 
 [node name="Exit" type="Button" parent="menuitems"]
 margin_top = 24.0
 margin_right = 365.0
 margin_bottom = 44.0
+focus_neighbour_bottom = NodePath("../Start")
 text = "Exit"
 
 [connection signal="pressed" from="menuitems/Start" to="." method="_on_Start_pressed"]
