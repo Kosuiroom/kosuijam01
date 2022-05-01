@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Actors/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Actors/Enemy/monster.tscn" type="PackedScene" id=2]
@@ -27,6 +27,33 @@
 0/shapes = [  ]
 0/z_index = 0
 
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.0621118, 0.397516, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 0.148657, 0.103317, 0.238281, 1, 0.24609, 0.163689, 0.598633, 1, 0.514177, 0.405991, 0.707031, 1 )
+
+[sub_resource type="GradientTexture" id=5]
+gradient = SubResource( 4 )
+
+[sub_resource type="Curve" id=7]
+_data = [ Vector2( 0, 0.810227 ), 0.0, 0.0, 0, 0, Vector2( 0.331522, 0.410227 ), 0.0, 0.0, 0, 0, Vector2( 0.61413, 0.910227 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.382955 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=8]
+curve = SubResource( 7 )
+
+[sub_resource type="ParticlesMaterial" id=6]
+emission_shape = 2
+emission_box_extents = Vector3( 150, 50, 1 )
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 60.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 2.0
+orbit_velocity = 0.01
+orbit_velocity_random = 0.0
+tangential_accel = 5.0
+scale_curve = SubResource( 8 )
+color_ramp = SubResource( 5 )
+
 [sub_resource type="Environment" id=2]
 background_mode = 4
 glow_enabled = true
@@ -48,6 +75,12 @@ margin_right = 846.0
 margin_bottom = 527.0
 texture = ExtResource( 10 )
 expand = true
+
+[node name="Particles2D" type="Particles2D" parent="TileMap/TextureRect"]
+position = Vector2( 333, 200 )
+scale = Vector2( 2, 2 )
+amount = 22
+process_material = SubResource( 6 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )
@@ -77,7 +110,7 @@ margin_bottom = -529.0
 visible = false
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 629, 346 )
+position = Vector2( 689, 378 )
 scale = Vector2( 2, 2 )
 
 [node name="Spawner" parent="." instance=ExtResource( 4 )]
