@@ -5,6 +5,8 @@
 [ext_resource path="res://UI/Splash Screen.jpg" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
 [node name="Control" type="Control"]
@@ -22,6 +24,27 @@ margin_top = -472.0
 margin_right = 1072.0
 margin_bottom = 608.0
 texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credit" type="Label" parent="."]
+margin_left = 104.0
+margin_top = 360.0
+margin_right = 936.0
+margin_bottom = 522.0
+custom_fonts/font = SubResource( 1 )
+text = "                Made within 48 hours
+
+
+Programming - Pontus Göth
+
+
+Art & Design - David Byström \"ArctiqFloe\"
+
+
+Music, Sound & Background - Towe Andersson \"Bluelle\"
+"
 __meta__ = {
 "_edit_use_anchors_": false
 }
