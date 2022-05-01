@@ -16,6 +16,7 @@ var dmgtodeal
 ###Signals
 signal health_update(playerHealth)
 signal fire()
+signal discharge()
 
 ###Methods
 func _process(_delta: float) -> void:
@@ -26,6 +27,7 @@ func _process(_delta: float) -> void:
 
 func fire():
 	emit_signal("fire")
+	emit_signal("discharge")
 	
 
 func damage(amount):
