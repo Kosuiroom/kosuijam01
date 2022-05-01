@@ -19,13 +19,13 @@ func _physics_process(delta):
 			$AnimatedSprite.flip_h = true
 		else:
 			$AnimatedSprite.flip_h = false
-
-
+			
 func _on_Player_dmgenemy(dmg):
 	damage(dmg)
 
 func damage(amount):
 	_set_health(monsterHealth - amount)
+	blinker.start_blinking(self, 0.5)
 	print("monster took dmg", amount)
 
 func _set_health(value):

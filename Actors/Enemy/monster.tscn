@@ -139,12 +139,12 @@ script = ExtResource( 2 )
 material = ExtResource( 9 )
 frames = SubResource( 9 )
 animation = "Walking"
+frame = 4
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="AnimatedSprite"]
 material = SubResource( 16 )
 frames = SubResource( 15 )
-frame = 1
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]

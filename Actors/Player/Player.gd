@@ -11,6 +11,7 @@ var velocity
 export var PlayerSpeed := 200.0
 export(int) var MaxHealth := 3
 onready var playerHealth = MaxHealth setget _set_health
+onready var sprite = $AnimatedSprite
 #
 ###Signals
 signal health_update(playerHealth)

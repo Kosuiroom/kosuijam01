@@ -7,6 +7,12 @@ func physics_update(delta: float) -> void:
 			Input.get_action_strength("mvDown") - Input.get_action_strength("mvUp")
 		)
 		
+		player.sprite.play("walking")
+		if input_direction.x < 0:
+			player.sprite.flip_h = true
+		else:
+			player.sprite.flip_h = false
+		
 		if input_direction.length() > 1.0:
 			input_direction = input_direction.normalized()
 			
