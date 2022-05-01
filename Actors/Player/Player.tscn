@@ -55,7 +55,6 @@ shadow_gradient_length = 3.0
 shadow_filter = 2
 
 [node name="Light2D2" type="Light2D" parent="lightbeam"]
-visible = false
 position = Vector2( -83.2553, -0.576886 )
 rotation = 1.57079
 scale = Vector2( 1, 0.663851 )

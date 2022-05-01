@@ -40,7 +40,7 @@ func _set_health(value):
 	print("player health ", playerHealth)
 
 	if playerHealth != prev_health:
-		#emit_signal("health_update", playerHealth)
+		emit_signal("health_update", playerHealth)
 		if playerHealth <= 0:
 			IsKilled()
 

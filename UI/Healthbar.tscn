@@ -1,8 +1,30 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
 
-[node name="TextureProgress" type="TextureProgress"]
-margin_right = 203.0
-margin_bottom = 40.0
-min_value = 1.0
+[ext_resource path="res://Sprites/Life_Hp_Empty.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Life_Hp_Bars.png" type="Texture" id=2]
+[ext_resource path="res://UI/Healthbar.gd" type="Script" id=3]
+
+[node name="healthbar" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -992.0
+margin_bottom = -569.0
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -4.0
+margin_top = 1.0
+margin_right = 46.0
+margin_bottom = 33.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="TextureProgress" type="TextureProgress" parent="TextureRect"]
+margin_left = -1.0
+margin_right = 51.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 24, 7 )
 max_value = 3.0
-value = 1.0
+value = 3.0
+texture_progress = ExtResource( 2 )
+nine_patch_stretch = true

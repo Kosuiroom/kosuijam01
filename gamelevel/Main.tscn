@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Actors/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Actors/Enemy/monster.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://gamelevel/spawner/spawner.tscn" type="PackedScene" id=4]
 [ext_resource path="res://gamelevel/Main.gd" type="Script" id=5]
 [ext_resource path="res://TileSet.png" type="Texture" id=6]
+[ext_resource path="res://UI/Healthbar.tscn" type="PackedScene" id=7]
 
 [sub_resource type="TileSet" id=3]
 0/name = "TileSet.png 0"
@@ -30,6 +31,17 @@ glow_enabled = true
 [node name="Main" type="Node"]
 script = ExtResource( 5 )
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Score" parent="CanvasLayer" instance=ExtResource( 3 )]
+position = Vector2( 22, 30 )
+
+[node name="healthbar" parent="CanvasLayer" instance=ExtResource( 7 )]
+margin_left = 24.0
+margin_top = 40.0
+margin_right = -968.0
+margin_bottom = -529.0
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 8, 16 )
 tile_set = SubResource( 3 )
@@ -45,10 +57,10 @@ visible = false
 color = Color( 0, 0, 0, 1 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 520, 336 )
+position = Vector2( 571, 417 )
 
 [node name="Spawner" parent="." instance=ExtResource( 4 )]
-position = Vector2( 135, 203 )
+position = Vector2( 117, 123 )
 
 [node name="Monster4" parent="." instance=ExtResource( 2 )]
 position = Vector2( 93, 343 )
@@ -68,7 +80,5 @@ position = Vector2( 520, 338 )
 current = true
 zoom = Vector2( 0.65, 0.65 )
 
-[node name="Score" parent="Camera2D" instance=ExtResource( 3 )]
-position = Vector2( -240, -138 )
-
+[connection signal="health_update" from="Player" to="CanvasLayer/healthbar" method="_on_Player_health_update"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
